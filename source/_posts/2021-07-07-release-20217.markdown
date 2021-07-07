@@ -19,12 +19,12 @@ feedback: true
 Happy July, which means Home Assistant Core 2021.7!
 
 An interesting release, with a bunch of little goodies to make things easier in
-creating automations, scripts and doing templating. Those are things that in
+creating automations, scripts, and doing templating. Those are things that in
 general, make me very happy. Mainly because, well, I use Home Assistant to
 automate 😁
 
 Also, we are saying "hi!" 👋 to a new type of entity, which is really exciting
-and I can't wait to see how that is being put the use in the future.
+and I can't wait to see how that is being put to use in the future.
 
 Lastly, I want to give a shout-out to [@klaasnicolaas]! He has been an intern
 with Nabu Casa for the last months. Besides doing the community highlights, he
@@ -56,8 +56,7 @@ Alright, that's it! Enjoy the release!
 
 ## New entity: Select
 
-In this release we welcome the `select` entity to the Home Assistant family. The
-select entity is family of the dropdown helper (also known as
+In this release, we welcome the `select` entity to the Home Assistant family. The select entity is a close relative of the dropdown helper (also known as
 `input_select`).
 
 The difference is that while the input select is configured and managed by you,
@@ -80,10 +79,9 @@ Genie you can now change the room size for your diffuser.
 ## Trigger conditions and trigger IDs
 
 If you are creating some complex automations in YAML, you might be familiar with
-this. Consider an big automation, with a whole bunch of triggers. But how
-would you know which of those triggers actually triggered the automation?
+this. Consider a big automation, with a whole bunch of triggers. But how would you know which of those triggers actually triggered the automation?
 
-You can now assign an `id` to your triggers that is passed into automation when
+You can now assign an `id` to your triggers that are passed into automation when
 triggered, allowing you to make decisions on it.
 
 ```yaml
@@ -138,8 +136,7 @@ Screenshot of using a trigger condition in the automation editor.
 ## Script debugging
 
 In [Home Assistant Core 2021.4](/blog/2021/04/07/release-20214/#automation-debugging),
-we added the ability to debug automations. This release, we've made these
-same powerful tools available for scripts!
+we added the ability to debug automations. In this release, we've made these same powerful tools available for scripts!
 
 So, this helps for the next time you are wondering: Why didn't that script work?
 Or why did it behave as it did? What the script is going on here?
@@ -160,8 +157,7 @@ A small, but possibly helpful, change to our script and automations.
 You can now reference other entities for the above/below values of numeric
 state triggers and conditions. Both sensors and number entities can be used.
 
-For example, you can now trigger an automation if the outside temperature
-is higher than the temperature inside.
+For example, you can now trigger an automation if the outside temperature is higher than the temperature inside.
 
 ```yaml
 automation:
@@ -189,8 +185,8 @@ is hard. And honestly, that will never go away, times, dates and timezones are
 complex little beasts.
 
 However, we realized that the hardest part of using date & times with templates
-is converting the state of a sensor or text to a datetime. This
-release we added a small template method to help with that: `as_datetime`.
+is converting the state of a sensor or text to a datetime. In this
+release, we added a small template method to help with that: `as_datetime`.
 
 It can be used as a filter or as a method. Here is an example of
 calculating the number of days until my drivers' license expires:
@@ -212,7 +208,7 @@ of Home Assistant.
 
 Thanks to [@kmdm], as of this release, we also provide a series version tag
 that always points to the latest patch version of that release, in addition
-to all existing tags we already provide.
+to all existing tags, we already provide.
 
 ```shell
 docker pull ghcr.io/home-assistant/home-assistant:2021.7
@@ -227,26 +223,21 @@ There is much more juice in this release; here are some of the other
 noteworthy changes this release:
 
 - Z-Wave JS got quite a few updates this release:
-  - A new `zwave_js.multicast_set_value` is available, allowing to issue
-    a set value command via multicast. Thanks, [@raman325]!
-  - Each node now has a status sensor available and can be pinged using the
-    new `zwave_js.ping` service. Added by [@raman325].
+  - A new `zwave_js.multicast_set_value` is available, allowing to issue a set value command via multicast. Thanks, [@raman325]!
+  - Each node now has a status sensor available and can be pinged using the new `zwave_js.ping` service. Added by [@raman325].
   - The Z-Wave JS configuration panel now has a "Heal Network" button,
     thanks [@cgarwood]!
   - Z-Wave JS Server connection can now be re-configured from the Z-Wave JS
     configuration panel, added by [@MartinHjelmare].
   - Z-Wave JS logs can now be downloaded, thanks [@raman325]!
-- The Google Assistant integration now has support for fan speed percentages and
-  preset modes. Thanks, [@jbouwh]!
+- The Google Assistant integration now has support for fan speed percentages and preset modes. Thanks, [@jbouwh]!
 - [@jbouwh] didn't stop there and added fan preset mode support to Alexa too!
 - The Philips TV integration now supports Ambilights, added by [@elupus].
 - Yamaha MusicCast integration now supports grouping services, thanks [@micha91]!
 - [@raman325] added a whole bunch of sensors to the ClimaCell integration!
 - WLED now supports local push. Updates are now instantly both ways. Also,
   the master light can be kept and added support for controlling user presets.
-- Setting up Xiaomi devices has gotten way easier! There is no need to do
-  difficult things to get the tokens. Instead, Home Assistant can now extract
-  the tokens from a Xiaomi Cloud account. Thanks, [@starkillerOG]!
+- Setting up Xiaomi devices has gotten way easier! There is no need to do difficult things to get the tokens. Instead, Home Assistant can now extract the tokens from a Xiaomi Cloud account. Thanks, [@starkillerOG]!
 - More Xiaomi updates, [@jbouwh] added support for fan percentage-based speeds
   and preset modes.
 - [@RenierM26] added a lot of new services to the Ezviz integration, thanks!
@@ -257,8 +248,7 @@ noteworthy changes this release:
 - If you have a SmartTube, you can now reset your reminders, thanks [@mdz]!
 - KNX had quite a lot of updates and added support for XY-color lights,
   thanks [@farmio].
-- [@OttoWinter] added support for presets, custom presets and custom fan modes
-  for climate controls in ESPHome. Awesome!
+- [@OttoWinter] added support for presets, custom presets, and custom fan modes for climate controls in ESPHome. Awesome!
 - Nuki now has a service to enable/disable continuous mode, thanks [@anaisbetts]!
 - [@cgomesu] added quantiles to Statistics integration, thanks!
 - The Home Assistant login page now better support password manager,
@@ -328,7 +318,7 @@ configuration.
 For more information, see the
 [HTTP integration documentation](https://www.home-assistant.io/integrations/http#use_x_forwarded_for).
 
-Additionally, access to Home Assistant from same IP as a trusted proxy will be
+Additionally, access to Home Assistant from the same IP address as a trusted proxy will be
 rejected if the request is marked as forwarded.
 
 ([@frenck] - [#51839]) ([http docs])
@@ -337,16 +327,16 @@ rejected if the request is marked as forwarded.
 
 {% details "Python 3.9 / Alpine 3.13" %}
 
-Our Docker images are now based on Alpine 3.13, and run Python 3.9.
+Our Docker images are now based on Alpine 3.13 and run Python 3.9.
 
 This is mainly interesting if you running custom Docker containers based
 on our container.
 
-If you are using Home Assistant Container, Home Assistant OS or the Home Assistant
+If you are using Home Assistant Container, Home Assistant OS, or the Home Assistant
 Supervised installation method, you will automatically get this update on upgrade
 and no additional interaction is needed.
 
-Please note, that Alpine 3.13 on an ARM devices running a 32-bits operating
+Please note, that Alpine 3.13 on ARM devices running a 32-bits operating
 system (armhf/armv7), requires your Docker version to be at least 19.03.9
 (although, we recommend updating to an even higher version). Additionally,
 you need to have `libseccomp` 2.42 or newer.
@@ -357,7 +347,7 @@ you need to have `libseccomp` 2.42 or newer.
 
 {% details "Airly" %}
 
-The AirQuality platform has been marked as deprecated. The `air_quality` entitiy
+The AirQuality platform has been marked as deprecated. The `air_quality` entity
 is removed and replaced with sensor entities. You will need to update their
 automations and dashboards if you have been using the `air_quality` entity
 of Airly.
@@ -368,8 +358,8 @@ of Airly.
 
 {% details "Azure Event Hub" %}
 
-When using this integration with with IoTHub, the `event_hub_name` is now
-a required field, can be filled by the DeviceID when using IoTHub.
+When using this integration with IoTHub, the `event_hub_name` is now
+a required field can be filled by the DeviceID when using IoTHub.
 
 ([@eavanvalkenburg] - [#52049]) ([azure_event_hub docs])
 
@@ -410,13 +400,11 @@ configured in your API settings on Coinbase.
 
 {% details "Database (statistics table)" %}
 
-The statistics table is Home Assistant data table that is not exposed
-or used by Home Assistant yet and is part of an alpha / feature that is in
-development. However, it does exist and it might be you found it already
-interesting or found a use for it.
+The statistics table is Home Assistant's data table that is not exposed or used by Home Assistant yet and is part of an alpha feature that is in
+development. However, it does exist and you might already want to check it out or find a use for it.
 
-This release, the contents of this table is reset. This does not impact
-any state history, and this data isn't used by Home Assistant as of yet.
+In this release, the content of this table is reset. This does not impact
+any state history and this data isn't used by Home Assistant as of yet.
 
 If you have no idea what this message is about, you can safely ignore it.
 We have merely listed this to be complete in our breaking changes report.
@@ -455,11 +443,7 @@ If you are looking for a replacement, you can use the
   `websocket-client` library which is incompatible with the requirements of
   other integrations that are actively maintained.
 
-- It's not clear if this integration still works with the gpmdp app that now
-  only supports YouTube Music. If there's someone that uses the integration
-  successfully and wants to take on the maintenance task that is required to get
-  the integration in a compatible state, please create an issue to discus
-   the future of this integration.
+- It's not clear if this integration still works with the gpmdp app that now only supports YouTube Music. If there's someone that uses the integration successfully and wants to take on the maintenance task that is required to get the integration in a compatible state, please create an issue to discuss the future of this integration.
 
 ([@MartinHjelmare] - [#51509]) ([gpmdp docs])
 
@@ -477,8 +461,7 @@ therefore the units for these values will change.
 
 {% details "Kuler Sky" %}
 
-Kuler Sky lights no longer supports deprecated `white_value` attribute for
-its lights, use the `rgbw_color` attribute instead.
+Kuler Skylights no longer supports the deprecated `white_value` attribute for its lights. Use the `rgbw_color` attribute instead.
 
 ([@emontnemery] - [#52080]) ([kulersky docs])
 
@@ -486,9 +469,7 @@ its lights, use the `rgbw_color` attribute instead.
 
 {% details "MeteoAlarm" %}
 
-You now cannot use the 2 letters of your country code, but must know use the
-complete country name in your configuration. To find out which country names
-you can use, please look at meteoalarm.org.
+You can no longer use the 2 letters of your country code, but must now use the complete country name in your configuration. To find out which country names you can use, please look at meteoalarm.org.
 
 ([@rolfberkenbosch] - [#51383]) ([meteoalarm docs])
 
@@ -553,7 +534,7 @@ modbus:
         state_closed: 0
 ```
 
-The new configuration looks like:
+The new configuration looks like this:
 
 ```yaml
 modbus:
@@ -685,12 +666,10 @@ modbus:
 
 {% details "MQTT" %}
 
-It's no longer possible to set attributes defined in the the base component
-via a configured `json_attributes_topic`.
+It's no longer possible to set attributes defined in the base component via a configured `json_attributes_topic`.
 
-For example a light no longer accepts brightness via the `json_attribute_topic`.
-This was unintended and undocumented functionality that lead to unexpected
-behavior.
+For example, a light no longer accepts brightness via the `json_attribute_topic`.
+This was unintended and an undocumented functionality that leads to unexpected behavior.
 
 This change applies to all supported MQTT platforms.
 
@@ -700,10 +679,8 @@ This change applies to all supported MQTT platforms.
 
 {% details "Nettigo Air Monitor" %}
 
-The AirQuality platform has been marked as deprecated. The `air_quality`
-entities will be deleted and replaced with `sensor` entities.
-You need to update your automations and dashboards if you have been usin
-these `air_quality` entities in those.
+The AirQuality platform has been marked as deprecated. The `air_quality` entities will be deleted and replaced with `sensor` entities.
+You need to update your automations and dashboards if you have been using these `air_quality` entities in those.
 
 ([@bieniu] - [#52152]) ([nam docs])
 
@@ -736,8 +713,7 @@ updated. This fixes a bug, that might be a breaking change for you.
 If you use an `@` in your database username or password, you will have to
 adjust your database connection string to use `%40` instead.
 
-Database connection strings are considered URLs, thus special charaters need
-to be encoded. `%40` is the URL encoded version of `@`.
+Database connection strings are considered URLs, thus special characters need to be encoded. `%40` is the URL encoded version of `@`.
 
 {% enddetails %}
 
@@ -765,10 +741,7 @@ and can now be safely removed from your YAML configuration files.
 {% details "Spain electricity hourly pricing (PVPC)" %}
 
 With the change to the new, and unique, electric tariff 2.0TD, if you
-previously had configured multiple PVPC sensors monitoring prices for more
-than one of the old tariffs, only the first one will survive, so if you
-have any automations or scripts that depend on these removed sensors,
-you might need to adjust them.
+previously had configured multiple PVPC sensors monitoring prices for more than one of the old tariffs, only the first one will survive. This means if you have any automation or script that depends on these removed sensors, you might need to adjust them.
 
 ([@azogue] - [#51789]) ([pvpc_hourly_pricing docs])
 
@@ -776,7 +749,7 @@ you might need to adjust them.
 
 {% details "Switcher" %}
 
-In preparation for multi device support, configuration via the UI and support
+In preparation for multi-device support, configuration via the UI and support
 for discovery; this integration is migrating entity attributes into sensors
 to be later added as device entities. The following switch entity attributes
 migrated to sensors:
@@ -795,9 +768,7 @@ migrated to sensors:
 {% details "Yamaha MusicCast" %}
 
 The integration has been rewritten from the ground up and is now configurable
-via the user interface only. Existing platform YAML config will automatically
-imported into the user interface on upgrade; and can be safely removed
-from the YAML configuration after upgrade has been completed.
+via the user interface only. Existing platform YAML config will automatically be imported into the user interface on upgrade and can be safely removed from the YAML configuration after the upgrade has been completed.
 
 ([@vigonotion] - [#51561]) ([yamaha_musiccast docs])
 
@@ -805,8 +776,7 @@ from the YAML configuration after upgrade has been completed.
 
 {% details "Zero-configuration networking (zeroconf)" %}
 
-The IPv6 configuration option has been deprecated in favor of the settings
-provided by the network integration.
+The IPv6 configuration option has been deprecated in favor of the settings provided by the network integration.
 
 ([@bdraco] - [#51173]) ([zeroconf docs])
 
